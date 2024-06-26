@@ -28,7 +28,7 @@ export default function Dashboard() {
       try {
         setIsLoading(true);
         const statisticsResponse = await axios.get(
-          `http://localhost:3000/api/v1/transactions/statistics/${month}`
+          `https://roxilerassignment-r3r1.onrender.com/api/v1/transactions/statistics/${month}`
         );
         setStatistics(statisticsResponse.data.data);
         setIsLoading(false);
@@ -45,7 +45,7 @@ export default function Dashboard() {
     try {
       setIsLoading(true);
       const transactionsResponse = await axios.get(
-        `http://localhost:3000/api/v1/transactions/${month}?page=${page}&search=${searchTerm}`
+        `https://roxilerassignment-r3r1.onrender.com/api/v1/transactions/${month}?page=${page}&search=${searchTerm}`
       );
       setTransactions(transactionsResponse.data.data);
       setIsLoading(false);
